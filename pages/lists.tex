@@ -1,0 +1,31 @@
+% =====================================================================
+% 插图和附表清单（可选，见规范 一·7）
+%   位于目录之后；由 \listoffigures / \listoftables 自动生成。
+%   同时列入目录；页码续用前置部分的大写罗马数字。
+%
+%   注意：LaTeX 的清单标题默认取 \listfigurename / \listtablename，
+%   与“插图清单 / 附表清单”不一致，故在下面重新定义。
+% =====================================================================
+
+\clearpage
+\ujsheadleft{插图和附表清单}%
+\thispagestyle{ujs@front}%
+\phantomsection
+\addcontentsline{toc}{chapter}{插图和附表清单}
+
+\begingroup
+\renewcommand{\listfigurename}{插\hspace{0.5em}图\hspace{0.5em}清\hspace{0.5em}单}
+\renewcommand{\listtablename}{附\hspace{0.5em}表\hspace{0.5em}清\hspace{0.5em}单}
+\renewcommand{\cftloftitlefont}{\hfill\heiti\zihao{2}}
+\renewcommand{\cftlottitlefont}{\hfill\heiti\zihao{2}}
+\renewcommand{\cftafterloftitle}{\hfill}
+\renewcommand{\cftafterlottitle}{\hfill}
+\setlength{\cftbeforeloftitleskip}{1\baselineskip}
+\setlength{\cftbeforelottitleskip}{1\baselineskip}
+\setlength{\cftafterloftitleskip}{0.5\baselineskip}
+\setlength{\cftafterlottitleskip}{0.5\baselineskip}
+\listoffigures
+\vspace{2\baselineskip}
+\listoftables
+\endgroup
+\clearpage

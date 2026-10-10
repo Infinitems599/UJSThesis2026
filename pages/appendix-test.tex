@@ -1,0 +1,74 @@
+% !TEX root = ../main.tex
+% 附录图表公式排版测试，保留原附录说明。
+\ujsappendix
+\ujschapter{附录 A\quad 图表与公式测试}
+
+本附录检查图~\ref{fig:appendix-a1}、表~\ref{tab:appendix-a1}和式\eqref{eq:appendix-a1}。编号应从 A1 开始，与正文的图~\ref{fig:test-blue}、表~\ref{tab:test-numeric}及式\eqref{eq:test-ohm}区分。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.38\textwidth]{test-blue.pdf}
+  \caption{附录蓝色图片示例}
+  \label{fig:appendix-a1}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \caption{附录 A 模拟参数}
+  \label{tab:appendix-a1}
+  {\songti\zihao{-4}
+  \begin{tabular}{lrr}
+    \toprule
+    参数组 & 电阻 / $\Omega$ & 电压 / V \\
+    \midrule
+    A & 10.00 & 12.50 \\
+    B & 15.00 &  9.75 \\
+    \bottomrule
+  \end{tabular}\par}
+\end{table}
+
+附录单行公式如下：
+\begin{equation}
+  P = U I
+  \label{eq:appendix-a1}
+\end{equation}
+同一附录的下一条多行公式应连续编号：
+\begin{align}
+  P &= I(IR) \notag\\
+    &= I^2R.
+  \label{eq:appendix-a2}
+\end{align}
+再次引用图~\ref{fig:appendix-a1}、表~\ref{tab:appendix-a1}、式\eqref{eq:appendix-a1}和式\eqref{eq:appendix-a2}，编号应保持一致。
+
+\ujschapter{附录 B\quad 编号重置测试}
+
+进入附录 B 后，图~\ref{fig:appendix-b1}、表~\ref{tab:appendix-b1}及式\eqref{eq:appendix-b1}均应从 B1 开始。上一附录的式\eqref{eq:appendix-a2}和正文的式\eqref{eq:test-mean}仍应跳转到原位置。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.38\textwidth]{test-orange.pdf}
+  \caption{附录橙色图片示例}
+  \label{fig:appendix-b1}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \caption{附录 B 模拟参数}
+  \label{tab:appendix-b1}
+  {\songti\zihao{-4}
+  \begin{tabular}{lrr}
+    \toprule
+    参数组 & 时间 / s & 电流 / A \\
+    \midrule
+    C & 2.10 & 0.80 \\
+    D & 3.40 & 1.25 \\
+    \bottomrule
+  \end{tabular}\par}
+\end{table}
+
+\begin{equation}
+  E = P t
+  \label{eq:appendix-b1}
+\end{equation}
+
+引用汇总：图~\ref{fig:appendix-b1}、表~\ref{tab:appendix-b1}和式\eqref{eq:appendix-b1}。附录页码与正文连续，不重新从 1 开始。

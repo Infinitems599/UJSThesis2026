@@ -1,0 +1,54 @@
+%% =====================================================================
+%% 江苏大学本科毕业设计（论文）2026 版 LaTeX 模板
+%%
+%% 依据：《江苏大学毕业设计（论文）写作规范（2026）》（附件 2）
+%%       《江苏大学毕业设计（论文）通用格式模板（理工农医教）2026 版》（附件 3）
+%%
+%% 编译：xelatex main → bibtex main → xelatex main → xelatex main
+%%       目录与交叉引用需要编译两遍。
+%%
+%% 本文件各页顺序与附件 3 完全一致：
+%%   封面 → 原创性声明 → 中文摘要 → 英文摘要 → 目录 → 正文 → 结论
+%%        → 参考文献 → 致谢 → 附录
+%% =====================================================================
+\documentclass{UJSThesis2026}
+
+\begin{document}
+
+%% ---------- 封面 ----------
+\input{pages/cover}
+
+%% ---------- 前置部分 ----------
+%% 封面 + 原创性声明；页码自原创性声明起用大写罗马数字（Ⅰ、Ⅱ、Ⅲ）
+\ujsfrontmatter
+
+\input{pages/abstract}      % 中文摘要（含关键词）
+\input{pages/enabstract}    % 英文摘要（含关键词）
+
+%% 目录（列至三级）
+\ujscontents
+
+%% 可选：插图和附表清单
+% \input{pages/lists}
+%% 可选：注释表（符号、标志、缩略词、单位、术语、名词等）
+% \input{pages/nomenclature}
+
+%% ---------- 正文（从引言起用阿拉伯数字页码） ----------
+\ujsmainmatter
+\input{pages/introduction}  % 引言为第 1 页，后续连续编号
+
+\input{pages/chapter1}      % 1  **（附件 3 第 1 章）
+\input{pages/chapter2}      % 2  **
+\input{pages/chapter3}      % 3  **
+\input{pages/chapter4}      % 4  **
+\input{pages/conclusion}    % 5  结论
+
+%% ---------- 后置部分 ----------
+\input{pages/references}    % 参考文献（由 refs.bib 自动生成，列入目录）
+\input{pages/thanks}        % 致谢（可选）
+\input{pages/appendix}      % 附录（可选）
+
+\end{document}
+
+
+

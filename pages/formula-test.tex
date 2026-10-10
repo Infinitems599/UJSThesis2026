@@ -1,0 +1,37 @@
+% !TEX root = ../main.tex
+% 公式排版测试；正式写作可删除对应 input。
+\section{单行公式与编号引用}
+
+单行公式见式\eqref{eq:test-ohm}。公式在全文中连续编号，编号位于公式所在行最右侧。
+\begin{equation}
+  U = I R
+  \label{eq:test-ohm}
+\end{equation}
+其中，$U$、$I$、$R$ 分别表示电压、电流和电阻。再次引用式\eqref{eq:test-ohm}时，编号应保持不变。
+
+\section{多行公式与末行编号}
+
+式\eqref{eq:test-polynomial}为续行公式，使用 \texttt{multline} 环境，将唯一编号放在末行右侧。
+\begin{multline}
+  p(x)=a_0+a_1x+a_2x^2+a_3x^3+a_4x^4 \\
+       {}+a_5x^5+a_6x^6+a_7x^7+a_8x^8.
+  \label{eq:test-polynomial}
+\end{multline}
+
+对齐推导见式\eqref{eq:test-derivation}，前一行不编号，最后一行编号。
+\begin{align}
+  (a+b)^2 &= (a+b)(a+b) \notag\\
+          &= a^2+2ab+b^2.
+  \label{eq:test-derivation}
+\end{align}
+
+\begin{equation*}
+  \frac{\mathrm{d}}{\mathrm{d}x}x^2 = 2x
+\end{equation*}
+以上未编号公式不消耗序号；下一条公式见式\eqref{eq:test-mean}。
+\begin{equation}
+  \bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_i
+  \label{eq:test-mean}
+\end{equation}
+
+交叉引用汇总：式\eqref{eq:test-ohm}、式\eqref{eq:test-polynomial}、式\eqref{eq:test-derivation}、式\eqref{eq:test-mean}。正文公式采用行内括号引用；附录公式见式\eqref{eq:appendix-a1}和式\eqref{eq:appendix-b1}。

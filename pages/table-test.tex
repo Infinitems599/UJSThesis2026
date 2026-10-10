@@ -1,0 +1,54 @@
+% !TEX root = ../main.tex
+% 数值为虚构的排版测试数据，正式写作时可删除本文件的 input。
+\section{数值表格测试}
+
+表~\ref{tab:test-numeric}给出三组模拟数值，表号与题名位于表上。同列使用统一小数位数并右对齐，检查整数位和小数点的纵向对齐。
+
+\begin{table}[htbp]
+  \centering
+  \caption{模拟测量结果}
+  \label{tab:test-numeric}
+  {\songti\zihao{-4}
+  \renewcommand{\arraystretch}{1.2}
+  \setlength{\tabcolsep}{12pt}
+  \begin{tabular}{lrrr}
+    \toprule
+    组别 & 电压 / V & 电流 / A & 时间 / s \\
+    \midrule
+    方案 A & 12.50 & 0.80 & 2.10 \\
+    方案 B &  9.75 & 1.25 & 3.40 \\
+    方案 C & 10.00 & 0.95 & 1.85 \\
+    \bottomrule
+  \end{tabular}\par}
+  \vspace{3pt}
+  \begin{minipage}{0.80\textwidth}
+    \songti\zihao{5}\setstretch{1.0}
+    注：数值仅用于排版测试；V、A、s 分别表示伏特、安培和秒。
+  \end{minipage}
+\end{table}
+
+表~\ref{tab:test-numeric}各单元格均填写具体数值，未使用“同上”“同左”等替代词。再次引用该表时，编号仍为表~\ref{tab:test-numeric}。
+
+\section{文字表格与跨章引用测试}
+
+表~\ref{tab:test-layout}记录检查项目。图片引用仍指向第二章的图~\ref{fig:test-blue}和图~\ref{fig:test-orange}，用于验证跨章引用。
+
+\begin{table}[htbp]
+  \centering
+  \caption{图表格式检查项目}
+  \label{tab:test-layout}
+  {\songti\zihao{-4}
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabularx}{0.95\textwidth}{@{}lL@{}}
+    \toprule
+    检查项目 & 预期显示 \\
+    \midrule
+    图号与图题 & 图号全文连续，简短题名置于图片下方。 \\
+    表号与表题 & 表号全文连续，简短题名置于表格上方。 \\
+    数值对齐 & 同列小数位统一，数值上下对齐。 \\
+    正文引用 & 使用行内图号、表号，重复引用保持编号一致。 \\
+    \bottomrule
+  \end{tabularx}\par}
+\end{table}
+
+两张表依次编号为表~\ref{tab:test-numeric}、表~\ref{tab:test-layout}，不带章号前缀；图与表分别计数。

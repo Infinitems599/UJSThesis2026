@@ -1,0 +1,33 @@
+# LaTeX 中间文件
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.synctex.gz
+*.thm
+*.toc
+*.lof
+*.lot
+*.xdv
+*.idx
+*.ind
+*.ilg
+*.nav
+*.snm
+*.vrb
+
+# 编辑器
+
+.idea/
+*.swp
+*~
+
+# 本地预览与构建产物
+/main.pdf
+*.synctex.gz
+Thumbs.db
+.DS_Store
+

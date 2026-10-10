@@ -1,0 +1,25 @@
+% !TEX root = ../main.tex
+% 图片格式测试，正式写作时可删除本文件的 input。
+\section{图片编号与图注测试}
+
+蓝色示例见图~\ref{fig:test-blue}，橙色示例见图~\ref{fig:test-orange}。图号按全文连续排列，图号与简短题名一并置于图片下方。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.72\textwidth]{test-blue.pdf}
+  \caption{蓝色纯色图片示例}
+  \label{fig:test-blue}
+\end{figure}
+
+图~\ref{fig:test-blue}为矢量 PDF，缩放后边缘应保持清晰。再次引用同一图片，编号应保持不变。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.60\textwidth]{test-orange.pdf}
+  \caption{橙色纯色图片示例}
+  \label{fig:test-orange}
+\end{figure}
+
+\section{正文图片引用测试}
+
+图~\ref{fig:test-blue}和图~\ref{fig:test-orange}分别显示两种纯色版块。正文引用使用行内图号，不使用参考文献上标形式。第三章仍使用这些标签引用，检查跨章引用是否一致。

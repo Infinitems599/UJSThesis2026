@@ -1,0 +1,35 @@
+% =====================================================================
+% 注释表（可选，见规范 一·8）
+%   含符号、标志、缩略词、首字母缩写、单位、术语、名词等。
+%   正文小四宋体，1.5 倍行距。
+% =====================================================================
+
+\clearpage
+\ujsheadleft{注释表}%
+\thispagestyle{ujs@front}%
+\phantomsection
+\addcontentsline{toc}{chapter}{注释表}
+
+\begin{center}
+  \vspace{0.5\baselineskip}
+  {\heiti\zihao{-2}注\hspace{1em}释\hspace{1em}表}
+\end{center}
+\par\vspace{\baselineskip}
+
+\noindent
+{\songti\zihao{-4}
+  \renewcommand{\arraystretch}{1.3}%
+  \begin{tabularx}{\textwidth}{@{}lL@{}}
+    \toprule
+    \textbf{符号 / 缩略词} & \textbf{含义} \\
+    \midrule
+    UJS      & Jiangsu University，江苏大学 \\
+    GB/T     & 中华人民共和国推荐性国家标准 \\
+    LaTeX    & 一种基于 \TeX{} 的排版系统 \\
+    xeCJK    & 在 XeLaTeX 下处理中日韩文字的宏包 \\
+    ctex     & 面向中文排版的 LaTeX 宏包与文档类集合 \\
+    bst      & BibTeX 样式文件（bibliography style） \\
+    \bottomrule
+  \end{tabularx}
+}
+\clearpage

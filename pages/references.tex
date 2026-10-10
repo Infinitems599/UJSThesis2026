@@ -1,0 +1,44 @@
+% =====================================================================
+% 参考文献
+%
+% 用 BibTeX + natbib 生成，样式为 gbt7714-numerical.bst（GB/T 7714-2015，
+% 连续编号、方括号、上标引用）。条目写在根目录的 refs.bib 里。
+%
+% 编译顺序（BibTeX 不能省）：
+%     xelatex main  →  bibtex main  →  xelatex main  →  xelatex main
+% 在 VS Code / LaTeX Workshop 下选 “xe->bib->xe->xe” 配方即可。
+%
+% 正文里引用：\upcite{键名}（上标方括号，符合 GB/T 7714 与附件 3 示例），
+% 需要平排方括号时用 \cite{键名}。
+%
+% 本页排版说明
+%   * 标题“参考文献”由本页的 \bibsection（重定义为文档类的章标题格式）排出，
+%     同时手工写一条目录项——因为这里不走 \chapter，latex 不会自动加目录。
+%   * 条号顶格、续行缩进 2 字符（文档类已显式设置数字制列表缩进），
+%     与附件 3 的版式一致。
+% =====================================================================
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{参考文献}%
+\begingroup
+\setstretch{1.5}%
+\songti\zihao{-4}%
+% 对齐附件 3：取消文献条目间额外间距，正文基线约 23.3pt。
+\setlength{\bibsep}{0pt}%
+\setlength{\baselineskip}{23.3pt}%
+\makeatletter
+\let\@bibsetup\NAT@bibsetnum
+\renewcommand{\bibsection}{%
+  \vspace*{-3.386pt}%
+  \ujs@chapterfmt{\bibname}%
+  \vspace{-5.815pt}%
+}
+\makeatother
+\bibliography{refs}
+\endgroup
+
+
+
+
+
